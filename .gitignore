@@ -51,3 +51,13 @@ logs/
 .DS_Store
 Thumbs.db
 
+# Ignorar todos los archivos generados dentro de la carpeta 'received'
+src/files/received/*
+# Excepto el archivo .gitkeep, que permite a git rastrear la carpeta vacía
+!src/files/received/.gitkeep
+# Ignorar todos los archivos generados dentro de la carpeta 'generated'
+src/files/generated/*
+# Excepto el archivo .gitkeep, que permite a git rastrear la carpeta vacía
+!src/files/generated/.gitkeep
+# Opcional: Ignorar cualquier archivo .gitkeep en cualquier subdirectorio si no quieres que aparezca
+# .gitkeep
