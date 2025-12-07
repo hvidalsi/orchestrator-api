@@ -15,18 +15,8 @@ class Settings(BaseSettings):
     log_level: str = Field(...)
     log_to_file: bool = Field(...)
 
-    # openai_api_key: str = Field(...)
-
     api_prefix: str = Field(...)
 
-    # stt_default_model: str = Field(...)
-    # stt_default_language: str = Field(...)
-    # stt_default_response_format: str = Field(...)
-
-    # tts_default_model: str = Field(...)
-    # tts_default_voice_type: str = Field(...)
-    # tts_default_speed: float = Field(...)
-    # tts_default_response_format: str = Field(...)
     banking_agent_chat_endpoint: str = Field(...)
     tts_api_endpoint: str = Field(...)
     stt_api_endpoint: str = Field(...)

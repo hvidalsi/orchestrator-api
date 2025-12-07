@@ -22,14 +22,10 @@ async def chat_stream(input_data: UserQueryRequest, request: Request):
     accept_header = request.headers.get("accept")
     encoder = EventEncoder(accept=accept_header)
 
-
-
-
     input_audio = input_data.audio
     thread_id = input_data.thread_id
     resume = input_data.resume
     agent_service = AgentService()
-    # logger.info(f"Processing streaming chat request for query: {message[:50]}...")
 
     async def generate():
         try:

@@ -108,7 +108,6 @@ class AgentService:
                         # --- Reconocimiento de eventos ---
                         if event_type == "RUN_STARTED":
                             yield RunStartedEvent(**event_dict)
-                            # print("[RUN_STARTED]:")
                         elif event_type == "TEXT_MESSAGE_START":
                             yield TextMessageStartEvent(**event_dict)
                             # Enviamos un evento TEXT_MESSAGE_CONTENT con el contenido en
@@ -131,31 +130,22 @@ class AgentService:
                             yield CustomEvent(
                                 name="AUDIO_MESSAGE_CONTENT", value=data_value
                             )
-                            # print("[TEXT_MESSAGE_CONTENT]", yiel_event)
                         elif event_type == "TEXT_MESSAGE_END":
                             yield TextMessageEndEvent(**event_dict)
-                            # print("[TEXT_MESSAGE_END]")
                         elif event_type == "TOOL_CALL_START":
                             yield ToolCallStartEvent(**event_dict)
-                            # print("[TOOL_CALL_START]")
                         elif event_type == "TOOL_CALL_ARGS":
                             yield ToolCallArgsEvent(**event_dict)
-                            # print("[TOOL_CALL_ARGS]")
                         elif event_type == "TOOL_CALL_END":
                             yield ToolCallEndEvent(**event_dict)
-                            # print("[TOOL_CALL_END]")
                         elif event_type == "TOOL_CALL_RESULT":
                             yield ToolCallResultEvent(**event_dict)
-                            # print("[TOOL_CALL_RESULT]")
                         elif event_type == "RUN_ERROR":
                             yield RunErrorEvent(**event_dict)
-                            # print("[ERROR]:", event.message)
                         elif event_type == "RUN_FINISHED":
                             yield RunFinishedEvent(**event_dict)
-                            # print("[RUN_FINISHED]:", event.message)
                         elif event_type == "CUSTOM":
                             yield CustomEvent(**event_dict)
-                            # print("[CUSTOM]:", event.name)
                         else:
                             print("[UNKNOWN EVENT]", event_dict)
 
