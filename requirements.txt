@@ -1,0 +1,9 @@
+fastapi
+requests
+pydantic
+pydantic-settings
+python-dotenv
+python-multipart
+uvicorn
+httpx
+ag-ui-protocol
